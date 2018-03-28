@@ -48,8 +48,8 @@ class Transaction implements ModelInterface, ArrayAccess
         'description' => 'string',
         'type' => 'string',
         'source' => 'string',
-        'settled_at' => '\DateTime',
-        'created_at' => '\DateTime',
+        'settled_at' => 'string',
+        'created_at' => 'string',
         'account_id' => 'string',
         'category' => 'string',
         'sub_category' => 'string',
@@ -66,13 +66,13 @@ class Transaction implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $swaggerFormats = [
-        'id' => null,
+        'id' => 'uuid',
         'description' => null,
         'type' => null,
         'source' => null,
-        'settled_at' => 'date-time',
-        'created_at' => 'date-time',
-        'account_id' => null,
+        'settled_at' => 'datetime',
+        'created_at' => 'datetime',
+        'account_id' => 'uuid',
         'category' => null,
         'sub_category' => null,
         'amount' => null,
@@ -369,7 +369,7 @@ class Transaction implements ModelInterface, ArrayAccess
     /**
      * Gets settled_at
      *
-     * @return \DateTime
+     * @return string
      */
     public function getSettledAt()
     {
@@ -379,7 +379,7 @@ class Transaction implements ModelInterface, ArrayAccess
     /**
      * Sets settled_at
      *
-     * @param \DateTime $settled_at settled_at
+     * @param string $settled_at settled_at
      *
      * @return $this
      */
@@ -393,7 +393,7 @@ class Transaction implements ModelInterface, ArrayAccess
     /**
      * Gets created_at
      *
-     * @return \DateTime
+     * @return string
      */
     public function getCreatedAt()
     {
@@ -403,7 +403,7 @@ class Transaction implements ModelInterface, ArrayAccess
     /**
      * Sets created_at
      *
-     * @param \DateTime $created_at created_at
+     * @param string $created_at created_at
      *
      * @return $this
      */

@@ -48,7 +48,7 @@ class Account implements ModelInterface, ArrayAccess
         'name' => 'string',
         'number' => 'string',
         'type' => 'string',
-        'updated_at' => '\DateTime',
+        'updated_at' => 'string',
         'users' => '\Banking\Client\Model\User[]',
         'features' => 'string[]',
         'routing' => 'string'
@@ -60,11 +60,11 @@ class Account implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $swaggerFormats = [
-        'id' => null,
+        'id' => 'uuid',
         'name' => null,
         'number' => null,
         'type' => null,
-        'updated_at' => 'date-time',
+        'updated_at' => 'datetime',
         'users' => null,
         'features' => null,
         'routing' => null
@@ -333,7 +333,7 @@ class Account implements ModelInterface, ArrayAccess
     /**
      * Gets updated_at
      *
-     * @return \DateTime
+     * @return string
      */
     public function getUpdatedAt()
     {
@@ -343,7 +343,7 @@ class Account implements ModelInterface, ArrayAccess
     /**
      * Sets updated_at
      *
-     * @param \DateTime $updated_at updated_at
+     * @param string $updated_at updated_at
      *
      * @return $this
      */

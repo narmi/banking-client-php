@@ -51,8 +51,8 @@ class Subscription implements ModelInterface, ArrayAccess
         'secret' => 'string',
         'version' => 'string',
         'is_active' => 'bool',
-        'created_at' => '\DateTime',
-        'updated_at' => '\DateTime'
+        'created_at' => 'string',
+        'updated_at' => 'string'
     ];
 
     /**
@@ -61,15 +61,15 @@ class Subscription implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $swaggerFormats = [
-        'id' => null,
+        'id' => 'uuid',
         'subscription' => null,
         'description' => null,
         'url' => null,
         'secret' => null,
         'version' => null,
         'is_active' => null,
-        'created_at' => 'date-time',
-        'updated_at' => 'date-time'
+        'created_at' => 'datetime',
+        'updated_at' => 'datetime'
     ];
 
     /**
@@ -411,7 +411,7 @@ class Subscription implements ModelInterface, ArrayAccess
     /**
      * Gets created_at
      *
-     * @return \DateTime
+     * @return string
      */
     public function getCreatedAt()
     {
@@ -421,7 +421,7 @@ class Subscription implements ModelInterface, ArrayAccess
     /**
      * Sets created_at
      *
-     * @param \DateTime $created_at created_at
+     * @param string $created_at created_at
      *
      * @return $this
      */
@@ -435,7 +435,7 @@ class Subscription implements ModelInterface, ArrayAccess
     /**
      * Gets updated_at
      *
-     * @return \DateTime
+     * @return string
      */
     public function getUpdatedAt()
     {
@@ -445,7 +445,7 @@ class Subscription implements ModelInterface, ArrayAccess
     /**
      * Sets updated_at
      *
-     * @param \DateTime $updated_at updated_at
+     * @param string $updated_at updated_at
      *
      * @return $this
      */

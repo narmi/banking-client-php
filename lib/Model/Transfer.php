@@ -55,8 +55,8 @@ class Transfer implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $swaggerFormats = [
-        'from_account_id' => null,
-        'to_account_id' => null,
+        'from_account_id' => 'uuid',
+        'to_account_id' => 'uuid',
         'amount' => 'currency'
     ];
 
