@@ -44,7 +44,7 @@ class InlineResponse201 implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $swaggerTypes = [
-        'subscription' => '\Banking\Client\Model\Subscription'
+        'transfer' => ''
     ];
 
     /**
@@ -53,7 +53,7 @@ class InlineResponse201 implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $swaggerFormats = [
-        'subscription' => null
+        'transfer' => null
     ];
 
     /**
@@ -83,7 +83,7 @@ class InlineResponse201 implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $attributeMap = [
-        'subscription' => 'subscription'
+        'transfer' => 'transfer'
     ];
 
     /**
@@ -92,7 +92,7 @@ class InlineResponse201 implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $setters = [
-        'subscription' => 'setSubscription'
+        'transfer' => 'setTransfer'
     ];
 
     /**
@@ -101,7 +101,7 @@ class InlineResponse201 implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $getters = [
-        'subscription' => 'getSubscription'
+        'transfer' => 'getTransfer'
     ];
 
     /**
@@ -164,7 +164,7 @@ class InlineResponse201 implements ModelInterface, ArrayAccess
      */
     public function __construct(array $data = null)
     {
-        $this->container['subscription'] = isset($data['subscription']) ? $data['subscription'] : null;
+        $this->container['transfer'] = isset($data['transfer']) ? $data['transfer'] : null;
     }
 
     /**
@@ -193,25 +193,25 @@ class InlineResponse201 implements ModelInterface, ArrayAccess
 
 
     /**
-     * Gets subscription
+     * Gets transfer
      *
-     * @return \Banking\Client\Model\Subscription
+     * @return 
      */
-    public function getSubscription()
+    public function getTransfer()
     {
-        return $this->container['subscription'];
+        return $this->container['transfer'];
     }
 
     /**
-     * Sets subscription
+     * Sets transfer
      *
-     * @param \Banking\Client\Model\Subscription $subscription subscription
+     * @param  $transfer transfer
      *
      * @return $this
      */
-    public function setSubscription($subscription)
+    public function setTransfer($transfer)
     {
-        $this->container['subscription'] = $subscription;
+        $this->container['transfer'] = $transfer;
 
         return $this;
     }

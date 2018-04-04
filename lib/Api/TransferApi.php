@@ -82,7 +82,7 @@ class TransferApi
      *
      * @throws \Banking\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return object
+     * @return \Banking\Client\Model\InlineResponse201
      */
     public function create($body, $authorization = null, $date = null, $signature = null, $x_request_id = null)
     {
@@ -103,11 +103,11 @@ class TransferApi
      *
      * @throws \Banking\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of object, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Banking\Client\Model\InlineResponse201, HTTP status code, HTTP response headers (array of strings)
      */
     public function createWithHttpInfo($body, $authorization = null, $date = null, $signature = null, $x_request_id = null)
     {
-        $returnType = 'object';
+        $returnType = '\Banking\Client\Model\InlineResponse201';
         $request = $this->createRequest($body, $authorization, $date, $signature, $x_request_id);
 
         try {
@@ -158,7 +158,7 @@ class TransferApi
                 case 201:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        'object',
+                        '\Banking\Client\Model\InlineResponse201',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -216,7 +216,7 @@ class TransferApi
      */
     public function createAsyncWithHttpInfo($body, $authorization = null, $date = null, $signature = null, $x_request_id = null)
     {
-        $returnType = 'object';
+        $returnType = '\Banking\Client\Model\InlineResponse201';
         $request = $this->createRequest($body, $authorization, $date, $signature, $x_request_id);
 
         return $this->client

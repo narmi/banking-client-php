@@ -55,9 +55,9 @@ class Membership implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $swaggerFormats = [
-        'id' => null,
-        'account_id' => null,
-        'user_id' => null
+        'id' => 'uuid',
+        'account_id' => 'uuid',
+        'user_id' => 'uuid'
     ];
 
     /**

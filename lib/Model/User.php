@@ -58,7 +58,7 @@ class User implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $swaggerFormats = [
-        'id' => null,
+        'id' => 'uuid',
         'email' => 'email',
         'first_name' => null,
         'last_name' => null,

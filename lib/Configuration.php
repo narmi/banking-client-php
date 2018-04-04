@@ -277,7 +277,7 @@ class Configuration
      */
     public function getHost()
     {
-        return $this->host;
+        return rtrim($this->host, '/');
     }
 
     /**

@@ -389,7 +389,7 @@ class SubscriptionApi
      *
      * @throws \Banking\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Banking\Client\Model\InlineResponse201
+     * @return \Banking\Client\Model\InlineResponse2011
      */
     public function create($body, $authorization = null, $date = null, $signature = null, $x_request_id = null)
     {
@@ -410,11 +410,11 @@ class SubscriptionApi
      *
      * @throws \Banking\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Banking\Client\Model\InlineResponse201, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Banking\Client\Model\InlineResponse2011, HTTP status code, HTTP response headers (array of strings)
      */
     public function createWithHttpInfo($body, $authorization = null, $date = null, $signature = null, $x_request_id = null)
     {
-        $returnType = '\Banking\Client\Model\InlineResponse201';
+        $returnType = '\Banking\Client\Model\InlineResponse2011';
         $request = $this->createRequest($body, $authorization, $date, $signature, $x_request_id);
 
         try {
@@ -465,7 +465,7 @@ class SubscriptionApi
                 case 201:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Banking\Client\Model\InlineResponse201',
+                        '\Banking\Client\Model\InlineResponse2011',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -523,7 +523,7 @@ class SubscriptionApi
      */
     public function createAsyncWithHttpInfo($body, $authorization = null, $date = null, $signature = null, $x_request_id = null)
     {
-        $returnType = '\Banking\Client\Model\InlineResponse201';
+        $returnType = '\Banking\Client\Model\InlineResponse2011';
         $request = $this->createRequest($body, $authorization, $date, $signature, $x_request_id);
 
         return $this->client
@@ -1008,7 +1008,7 @@ class SubscriptionApi
      *
      * @throws \Banking\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Banking\Client\Model\InlineResponse201
+     * @return \Banking\Client\Model\InlineResponse2011
      */
     public function get($subscription_id, $authorization = null, $date = null, $signature = null, $x_request_id = null)
     {
@@ -1029,11 +1029,11 @@ class SubscriptionApi
      *
      * @throws \Banking\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Banking\Client\Model\InlineResponse201, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Banking\Client\Model\InlineResponse2011, HTTP status code, HTTP response headers (array of strings)
      */
     public function getWithHttpInfo($subscription_id, $authorization = null, $date = null, $signature = null, $x_request_id = null)
     {
-        $returnType = '\Banking\Client\Model\InlineResponse201';
+        $returnType = '\Banking\Client\Model\InlineResponse2011';
         $request = $this->getRequest($subscription_id, $authorization, $date, $signature, $x_request_id);
 
         try {
@@ -1084,7 +1084,7 @@ class SubscriptionApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Banking\Client\Model\InlineResponse201',
+                        '\Banking\Client\Model\InlineResponse2011',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1134,7 +1134,7 @@ class SubscriptionApi
      */
     public function getAsyncWithHttpInfo($subscription_id, $authorization = null, $date = null, $signature = null, $x_request_id = null)
     {
-        $returnType = '\Banking\Client\Model\InlineResponse201';
+        $returnType = '\Banking\Client\Model\InlineResponse2011';
         $request = $this->getRequest($subscription_id, $authorization, $date, $signature, $x_request_id);
 
         return $this->client
@@ -1317,7 +1317,7 @@ class SubscriptionApi
      *
      * @throws \Banking\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Banking\Client\Model\InlineResponse201
+     * @return \Banking\Client\Model\InlineResponse2011
      */
     public function update($subscription_id, $body, $authorization = null, $date = null, $signature = null, $x_request_id = null)
     {
@@ -1339,11 +1339,11 @@ class SubscriptionApi
      *
      * @throws \Banking\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Banking\Client\Model\InlineResponse201, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Banking\Client\Model\InlineResponse2011, HTTP status code, HTTP response headers (array of strings)
      */
     public function updateWithHttpInfo($subscription_id, $body, $authorization = null, $date = null, $signature = null, $x_request_id = null)
     {
-        $returnType = '\Banking\Client\Model\InlineResponse201';
+        $returnType = '\Banking\Client\Model\InlineResponse2011';
         $request = $this->updateRequest($subscription_id, $body, $authorization, $date, $signature, $x_request_id);
 
         try {
@@ -1394,7 +1394,7 @@ class SubscriptionApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Banking\Client\Model\InlineResponse201',
+                        '\Banking\Client\Model\InlineResponse2011',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1454,7 +1454,7 @@ class SubscriptionApi
      */
     public function updateAsyncWithHttpInfo($subscription_id, $body, $authorization = null, $date = null, $signature = null, $x_request_id = null)
     {
-        $returnType = '\Banking\Client\Model\InlineResponse201';
+        $returnType = '\Banking\Client\Model\InlineResponse2011';
         $request = $this->updateRequest($subscription_id, $body, $authorization, $date, $signature, $x_request_id);
 
         return $this->client

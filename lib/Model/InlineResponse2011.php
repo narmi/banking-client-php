@@ -1,6 +1,6 @@
 <?php
 /**
- * AccountBalances
+ * InlineResponse2011
  *
  * PHP version 5
  *
@@ -22,12 +22,12 @@ use \ArrayAccess;
 use \Banking\Client\ObjectSerializer;
 
 /**
- * AccountBalances Class Doc Comment
+ * InlineResponse2011 Class Doc Comment
  *
  * @category Class
  * @package  Banking\Client
  */
-class AccountBalances implements ModelInterface, ArrayAccess
+class InlineResponse2011 implements ModelInterface, ArrayAccess
 {
     const DISCRIMINATOR = null;
 
@@ -36,7 +36,7 @@ class AccountBalances implements ModelInterface, ArrayAccess
       *
       * @var string
       */
-    protected static $swaggerModelName = 'AccountBalances';
+    protected static $swaggerModelName = 'inline_response_201_1';
 
     /**
       * Array of property to type mappings. Used for (de)serialization
@@ -44,12 +44,7 @@ class AccountBalances implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $swaggerTypes = [
-        'id' => 'string',
-        'account_id' => 'string',
-        'primary' => 'int',
-        'available' => 'int',
-        'ledger' => 'int',
-        'updated_at' => 'string'
+        'subscription' => '\Banking\Client\Model\Subscription'
     ];
 
     /**
@@ -58,12 +53,7 @@ class AccountBalances implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $swaggerFormats = [
-        'id' => 'prefixed-uuid',
-        'account_id' => 'uuid',
-        'primary' => 'currency',
-        'available' => 'currency',
-        'ledger' => 'currency',
-        'updated_at' => 'datetime'
+        'subscription' => null
     ];
 
     /**
@@ -93,12 +83,7 @@ class AccountBalances implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $attributeMap = [
-        'id' => 'id',
-        'account_id' => 'account_id',
-        'primary' => 'primary',
-        'available' => 'available',
-        'ledger' => 'ledger',
-        'updated_at' => 'updated_at'
+        'subscription' => 'subscription'
     ];
 
     /**
@@ -107,12 +92,7 @@ class AccountBalances implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $setters = [
-        'id' => 'setId',
-        'account_id' => 'setAccountId',
-        'primary' => 'setPrimary',
-        'available' => 'setAvailable',
-        'ledger' => 'setLedger',
-        'updated_at' => 'setUpdatedAt'
+        'subscription' => 'setSubscription'
     ];
 
     /**
@@ -121,12 +101,7 @@ class AccountBalances implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $getters = [
-        'id' => 'getId',
-        'account_id' => 'getAccountId',
-        'primary' => 'getPrimary',
-        'available' => 'getAvailable',
-        'ledger' => 'getLedger',
-        'updated_at' => 'getUpdatedAt'
+        'subscription' => 'getSubscription'
     ];
 
     /**
@@ -189,12 +164,7 @@ class AccountBalances implements ModelInterface, ArrayAccess
      */
     public function __construct(array $data = null)
     {
-        $this->container['id'] = isset($data['id']) ? $data['id'] : null;
-        $this->container['account_id'] = isset($data['account_id']) ? $data['account_id'] : null;
-        $this->container['primary'] = isset($data['primary']) ? $data['primary'] : null;
-        $this->container['available'] = isset($data['available']) ? $data['available'] : null;
-        $this->container['ledger'] = isset($data['ledger']) ? $data['ledger'] : null;
-        $this->container['updated_at'] = isset($data['updated_at']) ? $data['updated_at'] : null;
+        $this->container['subscription'] = isset($data['subscription']) ? $data['subscription'] : null;
     }
 
     /**
@@ -223,145 +193,25 @@ class AccountBalances implements ModelInterface, ArrayAccess
 
 
     /**
-     * Gets id
+     * Gets subscription
      *
-     * @return string
+     * @return \Banking\Client\Model\Subscription
      */
-    public function getId()
+    public function getSubscription()
     {
-        return $this->container['id'];
+        return $this->container['subscription'];
     }
 
     /**
-     * Sets id
+     * Sets subscription
      *
-     * @param string $id id
+     * @param \Banking\Client\Model\Subscription $subscription subscription
      *
      * @return $this
      */
-    public function setId($id)
+    public function setSubscription($subscription)
     {
-        $this->container['id'] = $id;
-
-        return $this;
-    }
-
-    /**
-     * Gets account_id
-     *
-     * @return string
-     */
-    public function getAccountId()
-    {
-        return $this->container['account_id'];
-    }
-
-    /**
-     * Sets account_id
-     *
-     * @param string $account_id account_id
-     *
-     * @return $this
-     */
-    public function setAccountId($account_id)
-    {
-        $this->container['account_id'] = $account_id;
-
-        return $this;
-    }
-
-    /**
-     * Gets primary
-     *
-     * @return int
-     */
-    public function getPrimary()
-    {
-        return $this->container['primary'];
-    }
-
-    /**
-     * Sets primary
-     *
-     * @param int $primary primary
-     *
-     * @return $this
-     */
-    public function setPrimary($primary)
-    {
-        $this->container['primary'] = $primary;
-
-        return $this;
-    }
-
-    /**
-     * Gets available
-     *
-     * @return int
-     */
-    public function getAvailable()
-    {
-        return $this->container['available'];
-    }
-
-    /**
-     * Sets available
-     *
-     * @param int $available available
-     *
-     * @return $this
-     */
-    public function setAvailable($available)
-    {
-        $this->container['available'] = $available;
-
-        return $this;
-    }
-
-    /**
-     * Gets ledger
-     *
-     * @return int
-     */
-    public function getLedger()
-    {
-        return $this->container['ledger'];
-    }
-
-    /**
-     * Sets ledger
-     *
-     * @param int $ledger ledger
-     *
-     * @return $this
-     */
-    public function setLedger($ledger)
-    {
-        $this->container['ledger'] = $ledger;
-
-        return $this;
-    }
-
-    /**
-     * Gets updated_at
-     *
-     * @return string
-     */
-    public function getUpdatedAt()
-    {
-        return $this->container['updated_at'];
-    }
-
-    /**
-     * Sets updated_at
-     *
-     * @param string $updated_at updated_at
-     *
-     * @return $this
-     */
-    public function setUpdatedAt($updated_at)
-    {
-        $this->container['updated_at'] = $updated_at;
+        $this->container['subscription'] = $subscription;
 
         return $this;
     }
